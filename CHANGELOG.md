@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-06-04
+- v1.1.0
+  - Refreshed the site to the current Kinetic Gain Style01 product shell.
+  - Added static prerender output under `site/`.
+  - Added GitHub Pages workflow-mode deploy with `velocity.kineticgain.com`.
+  - Updated repo metadata for the current public rail.
+
 ## 2023
 - Early notes on pipeline velocity, stage aging, and sourced versus influenced reporting gaps.
 

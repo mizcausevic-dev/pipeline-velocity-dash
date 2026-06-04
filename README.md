@@ -1,6 +1,9 @@
 # Pipeline Velocity Dash
 
-TypeScript dashboard for stage conversion, segment-level speed, sourced versus influenced pipeline, and revenue-momentum risk.
+Board-ready Kinetic Gain surface for stage conversion, segment-level speed, sourced versus influenced pipeline, and revenue-momentum risk.
+
+- Live: [http://velocity.kineticgain.com/](http://velocity.kineticgain.com/)
+- Repo: [https://github.com/mizcausevic-dev/pipeline-velocity-dash](https://github.com/mizcausevic-dev/pipeline-velocity-dash)
 
 ## Why this exists
 
@@ -57,6 +60,7 @@ Open:
 - `npm run test`
 - `npm run demo`
 - `npm run smoke`
+- `npm run prerender`
 - `npm run render:assets`
 
 ## Docs
