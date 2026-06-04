@@ -28,6 +28,11 @@ jobs:
           cache: npm
       - run: npm install
       - run: npm run prerender
+      - name: Copy CNAME into site artifact
+        run: |
+          if [ -f CNAME ]; then
+            cp CNAME site/CNAME
+          fi
       - name: SEO assets (robots.txt + sitemap.xml)
         run: |
           DOMAIN=$(cat CNAME 2>/dev/null | tr -d '[:space:]')
