@@ -120,6 +120,62 @@ function healthTag(health: string) {
   return health.toLowerCase();
 }
 
+function renderProductDepth() {
+  const cards = [
+    {
+      eyebrow: "Product depth",
+      title: "What this product does",
+      body:
+        "Turns stage conversion, cycle time, segment yield, sourced pipeline, influenced pipeline, and revenue-risk signals into a single commercial velocity control plane."
+    },
+    {
+      eyebrow: "GTM analyst lens",
+      title: "Where revenue teams use it",
+      body:
+        "Use it when demand volume looks healthy but sales acceptance, proposal aging, segment conversion, or forecast confidence is moving in the wrong direction."
+    },
+    {
+      eyebrow: "Value architecture",
+      title: "Where the money leaks",
+      body:
+        "The leak is commercial motion that looks like growth but slows cash conversion: low-fit pipeline, handoff delay, stuck proposals, weak segment yield, and overfunded channels."
+    },
+    {
+      eyebrow: "Technical proof",
+      title: "What is inspectable",
+      body:
+        "The repo exposes TypeScript scoring logic, segment and stage JSON outputs, static routes, API payloads, tests, smoke checks, prerendered artifacts, and screenshot evidence."
+    },
+    {
+      eyebrow: "Portfolio pattern",
+      title: "What these repos have in common",
+      body:
+        "Each Kinetic Gain surface converts operational evidence into board-readable decisions: owner, signal, model, risk, value, route, and verification stay visible together."
+    }
+  ];
+
+  return `<section class="sec">
+    <div class="sec-head">
+      <span class="sec-num">00</span>
+      <div>
+        <h2 class="sec-title">From pipeline dashboards to revenue-momentum decisions.</h2>
+        <p class="sec-lead">This is the product layer behind the demo: a shared operating view for seeing where pipeline quality, speed, and forecast confidence are actually weakening.</p>
+      </div>
+    </div>
+    <div class="card-grid">
+      ${cards
+        .map(
+          (card) => `<article class="acard lane-card">
+            <span class="metric-chip">${escapeHtml(card.eyebrow)}</span>
+            <h3>${escapeHtml(card.title)}</h3>
+            <p class="lane-copy">${escapeHtml(card.body)}</p>
+          </article>`
+        )
+        .join("")}
+    </div>
+  </section>`;
+}
+
 export function renderOverview() {
   const stats = summary();
   const risks = riskRegister();
@@ -170,6 +226,7 @@ export function renderOverview() {
         </div>
       </div>
     </section>
+    ${renderProductDepth()}
     <section class="sec">
       <div class="sec-head">
         <span class="sec-num">01</span>
@@ -390,6 +447,7 @@ export function renderDocs() {
         </div>
       </div>
     </section>
+    ${renderProductDepth()}
     <section class="sec">
       <div class="card-grid">
         <article class="acard lane-card">
